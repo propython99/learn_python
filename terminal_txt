@@ -1,0 +1,1024 @@
+
+        modified:   plants_list.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+➜  plants git:(plants) ✗ git add -A
+➜  plants git:(plants) ✗ git commit -m "added 3 new plants to plants"
+[plants ba7d409] added 3 new plants to plants
+ 1 file changed, 3 insertions(+)
+➜  plants git:(plants) git g                                       
+* ba7d409 (HEAD -> plants) added 3 new plants to plants
+* 0319ca7 (master) first commit
+➜  plants git:(plants) git checkout master                         
+Switched to branch 'master'
+➜  plants git:(master) cd ../animals     
+➜  animals git:(master) vi animals_list.txt
+➜  animals git:(master) ✗ git status         
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   animals_list.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+➜  animals git:(master) ✗ git add -A
+➜  animals git:(master) ✗ git commit -m "added 3 new animals to animals in master"
+[master 7a1aa48] added 3 new animals to animals in master
+ 1 file changed, 3 insertions(+)
+➜  animals git:(master) ls
+total 0
+drwxrwxrwx 1 sunny sunny 4.0K Jan 26 20:13 ../
+-rw-rw-rw- 1 sunny sunny   41 Jan 26 20:18 animals_list.txt
+drwxrwxrwx 1 sunny sunny 4.0K Jan 26 20:18 ./
+➜  animals git:(master) git g                                                   
+* 7a1aa48 (HEAD -> master) added 3 new animals to animals in master
+| * ba7d409 (plants) added 3 new plants to plants
+|/  
+* 0319ca7 first commit
+➜  animals git:(master) ls
+total 0
+drwxrwxrwx 1 sunny sunny 4.0K Jan 26 20:13 ../
+-rw-rw-rw- 1 sunny sunny   41 Jan 26 20:18 animals_list.txt
+drwxrwxrwx 1 sunny sunny 4.0K Jan 26 20:18 ./
+➜  animals git:(master) vi birds_list.txt  
+➜  animals git:(master) ✗ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        birds_list.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+➜  animals git:(master) ✗ git add -A
+➜  animals git:(master) ✗ git commit -m "created birds file"                      
+[master 213f9eb] created birds file
+ 1 file changed, 5 insertions(+)
+ create mode 100644 animals/birds_list.txt
+➜  animals git:(master) git status                        
+On branch master
+nothing to commit, working tree clean
+➜  animals git:(master) git g     
+* 213f9eb (HEAD -> master) created birds file
+* 7a1aa48 added 3 new animals to animals in master
+| * ba7d409 (plants) added 3 new plants to plants
+|/  
+* 0319ca7 first commit
+➜  animals git:(master) git checkout plants               
+Switched to branch 'plants'
+➜  animals git:(plants) ls
+total 0
+drwxrwxrwx 1 sunny sunny 4.0K Jan 26 20:13 ../
+drwxrwxrwx 1 sunny sunny 4.0K Jan 26 20:43 ./
+-rw-rw-rw- 1 sunny sunny   20 Jan 26 20:43 animals_list.txt
+➜  animals git:(plants) git branch         
+  master
+* plants
+➜  animals git:(plants) cat animals_list.txt
+lion
+tiger
+cat
+dog
+
+➜  animals git:(plants) git checkout master
+Switched to branch 'master'
+➜  animals git:(master) cat animals_list.txt
+lion
+tiger
+cat
+dog
+fox
+elephant
+giraffe
+
+➜  animals git:(master) git merge --help   
+➜  animals git:(master) git branch      
+* master
+  plants
+➜  animals git:(master) git g     
+* 213f9eb (HEAD -> master) created birds file
+* 7a1aa48 added 3 new animals to animals in master
+| * ba7d409 (plants) added 3 new plants to plants
+|/  
+* 0319ca7 first commit
+➜  animals git:(master) ls   
+total 0
+drwxrwxrwx 1 sunny sunny 4.0K Jan 26 20:13 ../
+-rw-rw-rw- 1 sunny sunny   41 Jan 26 20:44 animals_list.txt
+drwxrwxrwx 1 sunny sunny 4.0K Jan 26 20:44 ./
+-rw-rw-rw- 1 sunny sunny   31 Jan 26 20:44 birds_list.txt
+➜  animals git:(master) git checkout plants
+Switched to branch 'plants'
+➜  animals git:(plants) ls                 
+total 0
+drwxrwxrwx 1 sunny sunny 4.0K Jan 26 20:13 ../
+drwxrwxrwx 1 sunny sunny 4.0K Jan 26 20:48 ./
+-rw-rw-rw- 1 sunny sunny   20 Jan 26 20:48 animals_list.txt
+➜  animals git:(plants) cd ../plants        
+➜  plants git:(plants) ls
+total 0
+drwxrwxrwx 1 sunny sunny 4.0K Jan 26 20:13 ../
+drwxrwxrwx 1 sunny sunny 4.0K Jan 26 20:48 ./
+-rw-rw-rw- 1 sunny sunny   52 Jan 26 20:48 plants_list.txt
+➜  plants git:(plants) cat plants_list.txt 
+tulsi
+neem
+mango
+spinach
+methi
+spring onions
+roses
+
+➜  plants git:(plants) vi plants_list.txt
+➜  plants git:(plants) ✗ cat plants_list.txt
+tulsi
+neem
+mango
+spinach
+methi
+spring onions
+roses
+lillies
+hibiscus
+tulips
+
+➜  plants git:(plants) ✗ cat -n plants_list.txt
+     1  tulsi
+     2  neem
+     3  mango
+     4  spinach
+     5  methi
+     6  spring onions
+     7  roses
+     8  lillies
+     9  hibiscus
+    10  tulips
+    11
+➜  plants git:(plants) ✗ git merge --help   
+➜  plants git:(plants) ✗ git checkout master
+error: Your local changes to the following files would be overwritten by checkout:
+        plants/plants_list.txt
+Please commit your changes or stash them before you switch branches.
+Aborting
+➜  plants git:(plants) ✗ git status         
+On branch plants
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   plants_list.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+➜  plants git:(plants) ✗ git add -A
+➜  plants git:(plants) ✗ git commit -m "added 4 more birds"                      
+[plants 1c28579] added 4 more birds
+ 1 file changed, 3 insertions(+)
+➜  plants git:(plants) git g                             
+* 1c28579 (HEAD -> plants) added 4 more birds
+* ba7d409 added 3 new plants to plants
+| * 213f9eb (master) created birds file
+| * 7a1aa48 added 3 new animals to animals in master
+|/  
+* 0319ca7 first commit
+➜  plants git:(plants) git commit --amend                
+[plants 10fb13a] added 4 more plants
+ Date: Sun Jan 26 20:52:05 2020 -0500
+ 1 file changed, 3 insertions(+)
+➜  plants git:(plants) ls
+total 0
+drwxrwxrwx 1 sunny sunny 4.0K Jan 26 20:13 ../
+-rw-rw-rw- 1 sunny sunny   76 Jan 26 20:50 plants_list.txt
+drwxrwxrwx 1 sunny sunny 4.0K Jan 26 20:50 ./
+➜  plants git:(plants) git g             
+* 10fb13a (HEAD -> plants) added 4 more plants
+* ba7d409 added 3 new plants to plants
+| * 213f9eb (master) created birds file
+| * 7a1aa48 added 3 new animals to animals in master
+|/  
+* 0319ca7 first commit
+➜  plants git:(plants) git checkout master
+Switched to branch 'master'
+➜  plants git:(master) git merge plants   
+Merge made by the 'recursive' strategy.
+ plants/plants_list.txt | 6 ++++++
+ 1 file changed, 6 insertions(+)
+➜  plants git:(master) git g           
+*   bc19244 (HEAD -> master) merged plants branch with 10 plants
+|\  
+| * 10fb13a (plants) added 4 more plants
+| * ba7d409 added 3 new plants to plants
+* | 213f9eb created birds file
+* | 7a1aa48 added 3 new animals to animals in master
+|/  
+* 0319ca7 first commit
+➜  plants git:(master) git branch
+* master
+  plants
+➜  plants git:(master) git plants               
+git: 'plants' is not a git command. See 'git --help'.
+➜  plants git:(master) git checkout plants
+Switched to branch 'plants'
+➜  plants git:(plants) ls
+total 0
+drwxrwxrwx 1 sunny sunny 4.0K Jan 26 20:13 ../
+drwxrwxrwx 1 sunny sunny 4.0K Jan 26 20:54 ./
+-rw-rw-rw- 1 sunny sunny   76 Jan 26 20:54 plants_list.txt
+➜  plants git:(plants) cd ../animals         
+➜  animals git:(plants) ls
+total 0
+drwxrwxrwx 1 sunny sunny 4.0K Jan 26 20:13 ../
+-rw-rw-rw- 1 sunny sunny   20 Jan 26 20:56 animals_list.txt
+drwxrwxrwx 1 sunny sunny 4.0K Jan 26 20:56 ./
+➜  animals git:(plants) ls                 
+total 0
+drwxrwxrwx 1 sunny sunny 4.0K Jan 26 20:13 ../
+-rw-rw-rw- 1 sunny sunny   20 Jan 26 20:56 animals_list.txt
+drwxrwxrwx 1 sunny sunny 4.0K Jan 26 20:56 ./
+➜  animals git:(plants) git rebase master  
+First, rewinding head to replay your work on top of it...
+Fast-forwarded plants to master.
+➜  animals git:(plants) ls
+total 0
+drwxrwxrwx 1 sunny sunny 4.0K Jan 26 20:13 ../
+-rw-rw-rw- 1 sunny sunny   41 Jan 26 21:06 animals_list.txt
+drwxrwxrwx 1 sunny sunny 4.0K Jan 26 21:06 ./
+-rw-rw-rw- 1 sunny sunny   31 Jan 26 21:06 birds_list.txt
+➜  animals git:(plants) git g            
+*   bc19244 (HEAD -> plants, master) merged plants branch with 10 plants
+|\  
+| * 10fb13a added 4 more plants
+| * ba7d409 added 3 new plants to plants
+* | 213f9eb created birds file
+* | 7a1aa48 added 3 new animals to animals in master
+|/  
+* 0319ca7 first commit
+➜  animals git:(plants) git reflog plants
+bc19244 (HEAD -> plants, master) plants@{0}: rebase finished: refs/heads/plants onto bc19244f4bf0a750bdcb3f5b4e0658c1d5dce2a2
+10fb13a plants@{1}: commit (amend): added 4 more plants
+1c28579 plants@{2}: commit: added 4 more birds
+ba7d409 plants@{3}: commit: added 3 new plants to plants
+0319ca7 plants@{4}: branch: Created from HEAD
+➜  animals git:(plants) ls
+total 0
+drwxrwxrwx 1 sunny sunny 4.0K Jan 26 20:13 ../
+-rw-rw-rw- 1 sunny sunny   41 Jan 26 21:06 animals_list.txt
+drwxrwxrwx 1 sunny sunny 4.0K Jan 26 21:06 ./
+-rw-rw-rw- 1 sunny sunny   31 Jan 26 21:06 birds_list.txt
+➜  animals git:(plants) git reflog master
+bc19244 (HEAD -> plants, master) master@{0}: merge plants: Merge made by the 'recursive' strategy.
+213f9eb master@{1}: commit: created birds file
+7a1aa48 master@{2}: commit: added 3 new animals to animals in master
+0319ca7 master@{3}: commit (initial): first commit
+➜  animals git:(plants) ls
+total 0
+drwxrwxrwx 1 sunny sunny 4.0K Jan 26 20:13 ../
+-rw-rw-rw- 1 sunny sunny   41 Jan 26 21:06 animals_list.txt
+drwxrwxrwx 1 sunny sunny 4.0K Jan 26 21:06 ./
+-rw-rw-rw- 1 sunny sunny   31 Jan 26 21:06 birds_list.txt
+➜  animals git:(plants) git g            
+*   bc19244 (HEAD -> plants, master) merged plants branch with 10 plants
+|\  
+| * 10fb13a added 4 more plants
+| * ba7d409 added 3 new plants to plants
+* | 213f9eb created birds file
+* | 7a1aa48 added 3 new animals to animals in master
+|/  
+* 0319ca7 first commit
+➜  animals git:(plants) ls   
+total 0
+drwxrwxrwx 1 sunny sunny 4.0K Jan 26 20:13 ../
+-rw-rw-rw- 1 sunny sunny   41 Jan 26 21:06 animals_list.txt
+drwxrwxrwx 1 sunny sunny 4.0K Jan 26 21:06 ./
+-rw-rw-rw- 1 sunny sunny   31 Jan 26 21:06 birds_list.txt
+➜  animals git:(plants) git checkout master
+Switched to branch 'master'
+➜  animals git:(master) ls
+total 0
+drwxrwxrwx 1 sunny sunny 4.0K Jan 26 20:13 ../
+-rw-rw-rw- 1 sunny sunny   41 Jan 26 21:06 animals_list.txt
+drwxrwxrwx 1 sunny sunny 4.0K Jan 26 21:06 ./
+-rw-rw-rw- 1 sunny sunny   31 Jan 26 21:06 birds_list.txt
+➜  animals git:(master) cd ../plants 
+➜  plants git:(master) cat plants_list.txt   
+tulsi
+neem
+mango
+spinach
+methi
+spring onions
+roses
+lillies
+hibiscus
+tulips
+
+➜  plants git:(master) cat -n plants_list.txt
+     1  tulsi
+     2  neem
+     3  mango
+     4  spinach
+     5  methi
+     6  spring onions
+     7  roses
+     8  lillies
+     9  hibiscus
+    10  tulips
+    11
+➜  plants git:(master) cd ../animals         
+➜  animals git:(master) ls
+total 0
+drwxrwxrwx 1 sunny sunny 4.0K Jan 26 20:13 ../
+-rw-rw-rw- 1 sunny sunny   41 Jan 26 21:06 animals_list.txt
+drwxrwxrwx 1 sunny sunny 4.0K Jan 26 21:06 ./
+-rw-rw-rw- 1 sunny sunny   31 Jan 26 21:06 birds_list.txt
+➜  animals git:(master) vi fishes_list.txt
+➜  animals git:(master) ✗ git add -A         
+➜  animals git:(master) ✗ git commit -m "created fishes file"
+[master 89eca8d] created fishes file
+ 1 file changed, 5 insertions(+)
+ create mode 100644 animals/fishes_list.txt
+➜  animals git:(master) git g                              
+* 89eca8d (HEAD -> master) created fishes file
+*   bc19244 (plants) merged plants branch with 10 plants
+|\  
+| * 10fb13a added 4 more plants
+| * ba7d409 added 3 new plants to plants
+* | 213f9eb created birds file
+* | 7a1aa48 added 3 new animals to animals in master
+|/  
+* 0319ca7 first commit
+➜  animals git:(master) git checkout plants                
+Switched to branch 'plants'
+➜  animals git:(plants) ls
+total 0
+drwxrwxrwx 1 sunny sunny 4.0K Jan 26 20:13 ../
+-rw-rw-rw- 1 sunny sunny   41 Jan 26 21:06 animals_list.txt
+-rw-rw-rw- 1 sunny sunny   31 Jan 26 21:06 birds_list.txt
+drwxrwxrwx 1 sunny sunny 4.0K Jan 26 21:14 ./
+➜  animals git:(plants) cd ../plants 
+➜  plants git:(plants) ls
+total 0
+drwxrwxrwx 1 sunny sunny 4.0K Jan 26 20:13 ../
+drwxrwxrwx 1 sunny sunny 4.0K Jan 26 20:54 ./
+-rw-rw-rw- 1 sunny sunny   76 Jan 26 20:54 plants_list.txt
+➜  plants git:(plants) vi tools_list.txt 
+➜  plants git:(plants) ✗ git add -A         
+➜  plants git:(plants) ✗ git commit -m "created tools file" 
+[plants 4919c98] created tools file
+ 1 file changed, 5 insertions(+)
+ create mode 100644 plants/tools_list.txt
+➜  plants git:(plants) git g                             
+* 4919c98 (HEAD -> plants) created tools file
+| * 89eca8d (master) created fishes file
+|/  
+*   bc19244 merged plants branch with 10 plants
+|\  
+| * 10fb13a added 4 more plants
+| * ba7d409 added 3 new plants to plants
+* | 213f9eb created birds file
+* | 7a1aa48 added 3 new animals to animals in master
+|/  
+* 0319ca7 first commit
+➜  plants git:(plants) git checkout master               
+Switched to branch 'master'
+➜  plants git:(master) git g              
+* 4919c98 (plants) created tools file
+| * 89eca8d (HEAD -> master) created fishes file
+|/  
+*   bc19244 merged plants branch with 10 plants
+|\  
+| * 10fb13a added 4 more plants
+| * ba7d409 added 3 new plants to plants
+* | 213f9eb created birds file
+* | 7a1aa48 added 3 new animals to animals in master
+|/  
+* 0319ca7 first commit
+➜  plants git:(master) cd ../animals      
+➜  animals git:(master) ls
+total 0
+drwxrwxrwx 1 sunny sunny 4.0K Jan 26 20:13 ../
+-rw-rw-rw- 1 sunny sunny   41 Jan 26 21:06 animals_list.txt
+-rw-rw-rw- 1 sunny sunny   31 Jan 26 21:06 birds_list.txt
+drwxrwxrwx 1 sunny sunny 4.0K Jan 26 21:17 ./
+-rw-rw-rw- 1 sunny sunny   25 Jan 26 21:17 fishes_list.txt
+➜  animals git:(master) vi fishes_list.txt 
+➜  animals git:(master) ✗ git add -A
+➜  animals git:(master) ✗ git commit -m "added 4 more fish types to fishes file"
+[master aac5f30] added 4 more fish types to fishes file
+ 1 file changed, 3 insertions(+)
+➜  animals git:(master) git status                                            
+On branch master
+nothing to commit, working tree clean
+➜  animals git:(master) git g     
+* aac5f30 (HEAD -> master) added 4 more fish types to fishes file
+* 89eca8d created fishes file
+| * 4919c98 (plants) created tools file
+|/  
+*   bc19244 merged plants branch with 10 plants
+|\  
+| * 10fb13a added 4 more plants
+| * ba7d409 added 3 new plants to plants
+* | 213f9eb created birds file
+* | 7a1aa48 added 3 new animals to animals in master
+|/  
+* 0319ca7 first commit
+➜  animals git:(master) cd ../plants 
+➜  plants git:(master) ls
+total 0
+drwxrwxrwx 1 sunny sunny 4.0K Jan 26 20:13 ../
+-rw-rw-rw- 1 sunny sunny   76 Jan 26 20:54 plants_list.txt
+drwxrwxrwx 1 sunny sunny 4.0K Jan 26 21:17 ./
+➜  plants git:(master) git remote -v    
+➜  plants git:(master) git remote add origin git@github.com:propython99/learn_rebase.git
+➜  plants git:(master) git push -u origin master                                        
+Counting objects: 32, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (22/22), done.
+Writing objects: 100% (32/32), 2.60 KiB | 296.00 KiB/s, done.
+Total 32 (delta 3), reused 0 (delta 0)
+remote: Resolving deltas: 100% (3/3), done.
+To github.com:propython99/learn_rebase.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+➜  plants git:(master) git checkout plants                                   
+Switched to branch 'plants'
+➜  plants git:(plants) git push -u origin plants
+Counting objects: 4, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 384 bytes | 384.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0)
+remote: 
+remote: Create a pull request for 'plants' on GitHub by visiting:
+remote:      https://github.com/propython99/learn_rebase/pull/new/plants
+remote: 
+To github.com:propython99/learn_rebase.git
+ * [new branch]      plants -> plants
+Branch 'plants' set up to track remote branch 'plants' from 'origin'.
+➜  plants git:(plants) git checkout master      
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+➜  plants git:(master) ls
+total 0
+drwxrwxrwx 1 sunny sunny 4.0K Jan 26 20:13 ../
+-rw-rw-rw- 1 sunny sunny   76 Jan 26 20:54 plants_list.txt
+drwxrwxrwx 1 sunny sunny 4.0K Jan 26 21:29 ./
+➜  plants git:(master) cd ..animals
+cd: no such file or directory: ..animals
+➜  plants git:(master) git g              
+* aac5f30 (HEAD -> master, origin/master) added 4 more fish types to fishes file
+* 89eca8d created fishes file
+| * 4919c98 (origin/plants, plants) created tools file
+|/  
+*   bc19244 merged plants branch with 10 plants
+|\  
+| * 10fb13a added 4 more plants
+| * ba7d409 added 3 new plants to plants
+* | 213f9eb created birds file
+* | 7a1aa48 added 3 new animals to animals in master
+|/  
+* 0319ca7 first commit
+➜  plants git:(master) git checkout plants
+Switched to branch 'plants'
+Your branch is up to date with 'origin/plants'.
+➜  plants git:(plants) git g              
+* aac5f30 (origin/master, master) added 4 more fish types to fishes file
+* 89eca8d created fishes file
+| * 4919c98 (HEAD -> plants, origin/plants) created tools file
+|/  
+*   bc19244 merged plants branch with 10 plants
+|\  
+| * 10fb13a added 4 more plants
+| * ba7d409 added 3 new plants to plants
+* | 213f9eb created birds file
+* | 7a1aa48 added 3 new animals to animals in master
+|/  
+* 0319ca7 first commit
+➜  plants git:(plants) ls                                                               
+total 0
+drwxrwxrwx 1 sunny sunny 4.0K Jan 26 20:13 ../
+-rw-rw-rw- 1 sunny sunny   76 Jan 26 20:54 plants_list.txt
+-rw-rw-rw- 1 sunny sunny   30 Jan 26 21:30 tools_list.txt
+drwxrwxrwx 1 sunny sunny 4.0K Jan 26 21:30 ./
+➜  plants git:(plants) cd ../animals
+➜  animals git:(plants) ls
+total 0
+drwxrwxrwx 1 sunny sunny 4.0K Jan 26 20:13 ../
+-rw-rw-rw- 1 sunny sunny   41 Jan 26 21:06 animals_list.txt
+-rw-rw-rw- 1 sunny sunny   31 Jan 26 21:06 birds_list.txt
+drwxrwxrwx 1 sunny sunny 4.0K Jan 26 21:30 ./
+➜  animals git:(plants) git rebase master                                                
+First, rewinding head to replay your work on top of it...
+Applying: created tools file
+➜  animals git:(plants) ls
+total 0
+drwxrwxrwx 1 sunny sunny 4.0K Jan 26 20:13 ../
+-rw-rw-rw- 1 sunny sunny   41 Jan 26 21:06 animals_list.txt
+-rw-rw-rw- 1 sunny sunny   31 Jan 26 21:06 birds_list.txt
+-rw-rw-rw- 1 sunny sunny   52 Jan 26 21:30 fishes_list.txt
+drwxrwxrwx 1 sunny sunny 4.0K Jan 26 21:30 ./
+➜  animals git:(plants) git g            
+* ab96be2 (HEAD -> plants) created tools file
+* aac5f30 (origin/master, master) added 4 more fish types to fishes file
+* 89eca8d created fishes file
+| * 4919c98 (origin/plants) created tools file
+|/  
+*   bc19244 merged plants branch with 10 plants
+|\  
+| * 10fb13a added 4 more plants
+| * ba7d409 added 3 new plants to plants
+* | 213f9eb created birds file
+* | 7a1aa48 added 3 new animals to animals in master
+|/  
+* 0319ca7 first commit
+➜  animals git:(plants) cd ../plants 
+➜  plants git:(plants) ls
+total 0
+drwxrwxrwx 1 sunny sunny 4.0K Jan 26 20:13 ../
+-rw-rw-rw- 1 sunny sunny   76 Jan 26 20:54 plants_list.txt
+-rw-rw-rw- 1 sunny sunny   30 Jan 26 21:30 tools_list.txt
+drwxrwxrwx 1 sunny sunny 4.0K Jan 26 21:30 ./
+➜  plants git:(plants) vi tools_list.txt 
+➜  plants git:(plants) vi tools_list.txt
+➜  plants git:(plants) ✗ git status
+On branch plants
+Your branch and 'origin/plants' have diverged,
+and have 3 and 1 different commits each, respectively.
+  (use "git pull" to merge the remote branch into yours)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   tools_list.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+➜  plants git:(plants) ✗ git add -A
+➜  plants git:(plants) ✗ git commit -m "added 3 more tools to tools file"        
+[plants 48ac8af] added 3 more tools to tools file
+ 1 file changed, 4 insertions(+), 2 deletions(-)
+➜  plants git:(plants) git g                                           
+* 48ac8af (HEAD -> plants) added 3 more tools to tools file
+* ab96be2 created tools file
+* aac5f30 (origin/master, master) added 4 more fish types to fishes file
+* 89eca8d created fishes file
+| * 4919c98 (origin/plants) created tools file
+|/  
+*   bc19244 merged plants branch with 10 plants
+|\  
+| * 10fb13a added 4 more plants
+| * ba7d409 added 3 new plants to plants
+* | 213f9eb created birds file
+* | 7a1aa48 added 3 new animals to animals in master
+|/  
+* 0319ca7 first commit
+➜  plants git:(plants) cd ~        
+➜  ~ ls
+total 100K
+-rw-r--r-- 1 sunny sunny  220 Jan 23 21:12 .bash_logout
+-rw-r--r-- 1 sunny sunny  807 Jan 23 21:12 .profile
+drwxrwxrwx 1 sunny sunny 4.0K Jan 23 21:13 .vscode-server/
+-rw-r--r-- 1 sunny sunny    0 Jan 23 21:43 .sudo_as_admin_successful
+drwxr-xr-x 1 root  root  4.0K Jan 23 21:43 ../
+drwxrwxrwx 1 sunny sunny 4.0K Jan 23 21:58 .ssh/
+-rw------- 1 sunny sunny   32 Jan 24 19:50 .lesshst
+-rw-r--r-- 1 sunny sunny 3.8K Jan 25 13:20 .bashrc
+-rw------- 1 sunny sunny 5.3K Jan 25 14:56 .bash_history
+-rw-rw-rw- 1 sunny sunny  42K Jan 25 21:15 .zcompdump
+-rw-r--r-- 1 sunny sunny  570 Jan 25 21:22 .zshrc
+-r--r--r-- 1 sunny sunny  880 Jan 25 21:22 .zshrc.zwc
+drwxrwxrwx 1 sunny sunny 4.0K Jan 25 21:22 antigen/
+drwxr-xr-x 1 sunny root  4.0K Jan 25 21:22 .antigen/
+-rw-rw-rw- 1 sunny sunny  160 Jan 25 21:30 .gitconfig
+drwxr-xr-x 1 sunny sunny 4.0K Jan 26 13:55 .ipython/
+-rw------- 1 sunny sunny  16K Jan 26 21:35 .viminfo
+drwxrwxrwx 1 sunny sunny 4.0K Jan 26 21:41 development/
+-rw------- 1 sunny sunny  11K Jan 26 21:41 .zsh_history
+drwxr-xr-x 1 sunny sunny 4.0K Jan 26 21:41 ./
+➜  ~ cd development          
+➜  development ls
+total 0
+-rw-rw-r-- 1 sunny sunny   44 Jan 23 23:38 my_file
+drwxrwxrwx 1 sunny sunny 4.0K Jan 25 13:01 server/
+drwxrwxrwx 1 sunny sunny 4.0K Jan 25 22:12 learn_git/
+drwxrwxrwx 1 sunny sunny 4.0K Jan 26 20:13 learn_rebase/
+drwxrwxrwx 1 sunny sunny 4.0K Jan 26 21:41 ./
+drwxr-xr-x 1 sunny sunny 4.0K Jan 26 21:41 ../
+➜  development mkdir learn_python
+➜  development ls
+total 0
+-rw-rw-r-- 1 sunny sunny   44 Jan 23 23:38 my_file
+drwxrwxrwx 1 sunny sunny 4.0K Jan 25 13:01 server/
+drwxrwxrwx 1 sunny sunny 4.0K Jan 25 22:12 learn_git/
+drwxrwxrwx 1 sunny sunny 4.0K Jan 26 20:13 learn_rebase/
+drwxrwxrwx 1 sunny sunny 4.0K Jan 26 21:41 learn_python/
+drwxrwxrwx 1 sunny sunny 4.0K Jan 26 21:41 ./
+drwxr-xr-x 1 sunny sunny 4.0K Jan 26 21:41 ../
+➜  development cd learn_python
+➜  learn_python ls
+total 0
+drwxrwxrwx 1 sunny sunny 4.0K Jan 26 21:41 ../
+drwxrwxrwx 1 sunny sunny 4.0K Jan 26 21:41 ./
+➜  learn_python git init
+Initialized empty Git repository in /home/sunny/development/learn_python/.git/
+➜  learn_python git:(master) ls
+total 0
+drwxrwxrwx 1 sunny sunny 4.0K Jan 26 21:41 ../
+drwxrwxrwx 1 sunny sunny 4.0K Jan 26 21:41 ./
+drwxrwxrwx 1 sunny sunny 4.0K Jan 26 21:41 .git/
+➜  learn_python git:(master) touch hello.py
+➜  learn_python git:(master) ✗ ls
+total 0
+drwxrwxrwx 1 sunny sunny 4.0K Jan 26 21:41 ../
+-rw-rw-rw- 1 sunny sunny    0 Jan 26 21:42 hello.py
+drwxrwxrwx 1 sunny sunny 4.0K Jan 26 21:42 ./
+drwxrwxrwx 1 sunny sunny 4.0K Jan 26 21:42 .git/
+➜  learn_python git:(master) ✗ touch hello.py
+➜  learn_python git:(master) ✗ ls
+total 0
+drwxrwxrwx 1 sunny sunny 4.0K Jan 26 21:41 ../
+drwxrwxrwx 1 sunny sunny 4.0K Jan 26 21:42 ./
+-rw-rw-rw- 1 sunny sunny    0 Jan 26 21:42 hello.py
+drwxrwxrwx 1 sunny sunny 4.0K Jan 26 21:42 .git/
+➜  learn_python git:(master) ✗ python hello.py 
+hello
+➜  learn_python git:(master) ✗ which python   
+python: aliased to /usr/bin/python3
+➜  learn_python git:(master) ✗ python --version
+Python 3.6.7
+➜  learn_python git:(master) ✗ python hello.py 
+hello
+➜  learn_python git:(master) ✗ python hello.py
+hello
+1
+➜  learn_python git:(master) ✗ python hello.py
+hello
+1
+True
+b'10'
+➜  learn_python git:(master) ✗ python hello.py
+hello
+1
+True
+2
+➜  learn_python git:(master) ✗ python hello.py
+hello
+1
+True
+2
+26
+➜  learn_python git:(master) ✗ ls
+total 0
+drwxrwxrwx 1 sunny sunny 4.0K Jan 26 21:41 ../
+drwxrwxrwx 1 sunny sunny 4.0K Jan 26 21:42 ./
+drwxrwxrwx 1 sunny sunny 4.0K Jan 26 21:47 .git/
+-rw-rw-rw- 1 sunny sunny  286 Jan 26 21:48 hello.py
+➜  learn_python git:(master) ✗ mv hello.py printing.py
+➜  learn_python git:(master) ✗ ls
+total 0
+drwxrwxrwx 1 sunny sunny 4.0K Jan 26 21:41 ../
+-rw-rw-rw- 1 sunny sunny  286 Jan 26 21:48 printing.py
+drwxrwxrwx 1 sunny sunny 4.0K Jan 26 21:48 ./
+drwxrwxrwx 1 sunny sunny 4.0K Jan 26 21:48 .git/
+➜  learn_python git:(master) ✗ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        printing.py
+
+nothing added to commit but untracked files present (use "git add" to track)
+➜  learn_python git:(master) ✗ git add priting.py
+fatal: pathspec 'priting.py' did not match any files
+➜  learn_python git:(master) ✗ ls
+total 0
+drwxrwxrwx 1 sunny sunny 4.0K Jan 26 21:41 ../
+-rw-rw-rw- 1 sunny sunny  286 Jan 26 21:48 printing.py
+drwxrwxrwx 1 sunny sunny 4.0K Jan 26 21:48 ./
+drwxrwxrwx 1 sunny sunny 4.0K Jan 26 21:49 .git/
+➜  learn_python git:(master) ✗ git add printing.py 
+➜  learn_python git:(master) ✗ git status         
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   printing.py
+
+➜  learn_python git:(master) ✗ git commit -m "learn printing different types of data"
+[master (root-commit) cfcf270] learn printing different types of data
+ 1 file changed, 5 insertions(+)
+ create mode 100644 printing.py
+➜  learn_python git:(master) git remote -v                                                    
+\%                                                                                                                                                                               
+➜  learn_python git:(master)  
+➜  learn_python git:(master) git remote -v
+➜  learn_python git:(master) git remote add origin git@github.com:propython99/learn_python.git
+➜  learn_python git:(master) git push -u origin master
+Warning: Permanently added the RSA host key for IP address '192.30.253.113' to the list of known hosts.
+Counting objects: 3, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 382 bytes | 382.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To github.com:propython99/learn_python.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+➜  learn_python git:(master) ls
+total 0
+drwxrwxrwx 1 sunny sunny 4.0K Jan 26 21:41 ../
+-rw-rw-rw- 1 sunny sunny  286 Jan 26 21:48 printing.py
+drwxrwxrwx 1 sunny sunny 4.0K Jan 26 21:48 ./
+drwxrwxrwx 1 sunny sunny 4.0K Jan 26 21:52 .git/
+➜  learn_python git:(master) git status               
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+➜  learn_python git:(master) git g     
+* cfcf270 (HEAD -> master, origin/master) learn printing different types of data
+➜  learn_python git:(master) git log
+commit cfcf270261fe5ce94338e654471b476b1e5be512 (HEAD -> master, origin/master)
+Author: sunny <propython99@gmail.com>
+Date:   Sun Jan 26 21:49:31 2020 -0500
+
+    learn printing different types of data
+➜  learn_python git:(master) ls     
+total 0
+drwxrwxrwx 1 sunny sunny 4.0K Jan 26 21:41 ../
+-rw-rw-rw- 1 sunny sunny  286 Jan 26 21:48 printing.py
+drwxrwxrwx 1 sunny sunny 4.0K Jan 26 21:48 ./
+drwxrwxrwx 1 sunny sunny 4.0K Jan 26 21:52 .git/
+➜  learn_python git:(master) touch var.py  
+➜  learn_python git:(master) ✗ ls
+total 0
+drwxrwxrwx 1 sunny sunny 4.0K Jan 26 21:41 ../
+-rw-rw-rw- 1 sunny sunny  286 Jan 26 21:48 printing.py
+-rw-rw-rw- 1 sunny sunny    0 Jan 26 21:55 var.py
+drwxrwxrwx 1 sunny sunny 4.0K Jan 26 21:55 ./
+drwxrwxrwx 1 sunny sunny 4.0K Jan 26 21:55 .git/
+➜  learn_python git:(master) ✗ python var.py    
+10
+➜  learn_python git:(master) ✗ python var.py
+10
+hello
+➜  learn_python git:(master) ✗ python var.py
+Variable "a" has a value of : 10 and it has a type of : <class 'int'>
+Variable "a" has a value of : hello and it has a type of : <class 'str'>
+➜  learn_python git:(master) ✗ python var.py
+hello
+➜  learn_python git:(master) ✗ python       
+Python 3.6.7 (default, Oct 22 2018, 11:32:17) 
+[GCC 8.2.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> a=10
+>>> print(a)
+10
+>>> a="hello"
+>>> print(a)
+hello
+>>> a=True
+>>> print(a)
+True
+>>> print(not a)
+False
+>>> quit()
+➜  learn_python git:(master) ✗ python 
+Python 3.6.7 (default, Oct 22 2018, 11:32:17) 
+[GCC 8.2.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> quit()
+➜  learn_python git:(master) ✗ python
+Python 3.6.7 (default, Oct 22 2018, 11:32:17) 
+[GCC 8.2.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> quit()
+➜  learn_python git:(master) ✗ python var.py
+Variable "a" has a value of : 10 and its type is : <class 'int'>
+Variable "a" has a value of : hello and its type is : <class 'str'>
+Variable "a" has a value of : True and its type is : <class 'bool'>
+➜  learn_python git:(master) ✗ python       
+Python 3.6.7 (default, Oct 22 2018, 11:32:17) 
+[GCC 8.2.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> a = True
+>>> type(a)
+<class 'bool'>
+>>> help(print)
+
+>>> help(print)
+
+>>> help(help)
+
+>>> help(def)
+  File "<stdin>", line 1
+    help(def)
+           ^
+SyntaxError: invalid syntax
+>>> help(type)
+
+>>> quit()
+➜  learn_python git:(master) ✗ ls
+total 0
+drwxrwxrwx 1 sunny sunny 4.0K Jan 26 21:41 ../
+-rw-rw-rw- 1 sunny sunny  286 Jan 26 21:48 printing.py
+drwxrwxrwx 1 sunny sunny 4.0K Jan 26 21:55 ./
+-rw-rw-rw- 1 sunny sunny  281 Jan 26 22:09 var.py
+drwxrwxrwx 1 sunny sunny 4.0K Jan 26 22:13 .git/
+➜  learn_python git:(master) ✗ git status         
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        var.py
+
+nothing added to commit but untracked files present (use "git add" to track)
+➜  learn_python git:(master) ✗ git add -A         
+➜  learn_python git:(master) ✗ git commit -m "learn about variables"                 
+[master b6895cf] learn about variables
+ 1 file changed, 8 insertions(+)
+ create mode 100644 var.py
+➜  learn_python git:(master) git push -u origin master            
+Counting objects: 3, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 389 bytes | 389.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To github.com:propython99/learn_python.git
+   cfcf270..b6895cf  master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+➜  learn_python git:(master) git remote -v                                                    
+origin  git@github.com:propython99/learn_python.git (fetch)
+origin  git@github.com:propython99/learn_python.git (push)
+➜  learn_python git:(master) python                   
+Python 3.6.7 (default, Oct 22 2018, 11:32:17) 
+[GCC 8.2.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> a = True
+>>> b = False
+>>> a and b
+False
+>>> a or b
+True
+>>> not b
+True
+>>> not a
+False
+>>> not a and b
+False
+>>> (not a) and b
+False
+>>> a and (not b)
+True
+>>> quit()
+➜  learn_python git:(master) ls
+total 0
+drwxrwxrwx 1 sunny sunny 4.0K Jan 26 21:41 ../
+-rw-rw-rw- 1 sunny sunny  286 Jan 26 21:48 printing.py
+drwxrwxrwx 1 sunny sunny 4.0K Jan 26 21:55 ./
+-rw-rw-rw- 1 sunny sunny  281 Jan 26 22:09 var.py
+drwxrwxrwx 1 sunny sunny 4.0K Jan 26 22:18 .git/
+➜  learn_python git:(master) touch oper.py
+➜  learn_python git:(master) ✗ ls
+total 0
+drwxrwxrwx 1 sunny sunny 4.0K Jan 26 21:41 ../
+-rw-rw-rw- 1 sunny sunny  286 Jan 26 21:48 printing.py
+-rw-rw-rw- 1 sunny sunny  281 Jan 26 22:09 var.py
+-rw-rw-rw- 1 sunny sunny    0 Jan 26 22:19 oper.py
+drwxrwxrwx 1 sunny sunny 4.0K Jan 26 22:19 ./
+drwxrwxrwx 1 sunny sunny 4.0K Jan 26 22:19 .git/
+➜  learn_python git:(master) ✗ git add -A                           
+➜  learn_python git:(master) ✗ git commit -m "learn about operators"
+[master edb504a] learn about operators
+ 1 file changed, 9 insertions(+)
+ create mode 100644 oper.py
+➜  learn_python git:(master) git push -u origin master            
+Counting objects: 3, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 426 bytes | 426.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To github.com:propython99/learn_python.git
+   b6895cf..edb504a  master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+➜  learn_python git:(master) mv ~/development/learn_git/learn_lists.py .
+➜  learn_python git:(master) ✗ ls
+total 4.0K
+drwxrwxrwx 1 sunny sunny 4.0K Jan 26 21:41 ../
+-rw-rw-rw- 1 sunny sunny  286 Jan 26 21:48 printing.py
+-rw-rw-rw- 1 sunny sunny  281 Jan 26 22:09 var.py
+-rw-rw-rw- 1 sunny sunny  168 Jan 26 22:20 oper.py
+-rw-rw-rw- 1 sunny sunny  705 Jan 26 22:32 learn_lists.py
+drwxrwxrwx 1 sunny sunny 4.0K Jan 26 22:32 ./
+drwxrwxrwx 1 sunny sunny 4.0K Jan 26 22:32 .git/
+➜  learn_python git:(master) ✗ python learn_lists.py 
+{'mom': 70, 'dad': 70, 'sis': 60, 'my': 60}
+{'mom': 170, 'dad': 172, 'sis': 175, 'my': 150}
+➜  learn_python git:(master) ✗ python learn_lists.py
+{'mom': 70, 'dad': 70, 'sis': 60, 'my': 60}
+{'mom': 170, 'dad': 172, 'sis': 175, 'my': 150}
+➜  learn_python git:(master) ✗ python learn_lists.py
+<class 'list'>
+<class 'dict'>
+➜  learn_python git:(master) ✗ python               
+Python 3.6.7 (default, Oct 22 2018, 11:32:17) 
+[GCC 8.2.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> heights = {
+...     "mom" : 170,
+...     "dad" : 172,
+...     "sis" : 175,
+...     "my" : 150,
+... }
+>>> print(heights()
+... 
+KeyboardInterrupt
+>>> print(heights)
+{'mom': 170, 'dad': 172, 'sis': 175, 'my': 150}
+>>> heights
+{'mom': 170, 'dad': 172, 'sis': 175, 'my': 150}
+>>> weights
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'weights' is not defined
+>>> heights[mom]
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'mom' is not defined
+>>> heights["mom"]
+170
+>>> family_member = 10
+>>> heights[family_member]
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+KeyError: 10
+>>> family_member = "mom"
+>>> heights[family_member]
+170
+>>> family_member = "my"
+>>> heights[family_member]
+150
+>>> family_member = "bro"
+>>> heights[family_member]
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+KeyError: 'bro'
+>>> bio = {
+...     "mom" : {"name": "alice", "weight": 70, "height": 170},
+...     "dad" : {"name": "brian", "weight": 70, "height": 172},
+...     "sis" : {"name": "lucy", "weight": 60, "height": 175},
+...     "my" : {"name": "victoria", "weight": 60, "height": 150}
+... }
+>>> bio
+{'mom': {'name': 'alice', 'weight': 70, 'height': 170}, 'dad': {'name': 'brian', 'weight': 70, 'height': 172}, 'sis': {'name': 'lucy', 'weight': 60, 'height': 175}, 'my': {'name': 'victoria', 'weight': 60, 'height': 150}}
+>>> from pprint import pprint
+>>> pprint(bio)
+{'dad': {'height': 172, 'name': 'brian', 'weight': 70},
+ 'mom': {'height': 170, 'name': 'alice', 'weight': 70},
+ 'my': {'height': 150, 'name': 'victoria', 'weight': 60},
+ 'sis': {'height': 175, 'name': 'lucy', 'weight': 60}}
+>>> bio['mom']
+{'name': 'alice', 'weight': 70, 'height': 170}
+>>> bio['mom']['height']
+170
+>>> quit()
+➜  learn_python git:(master) ✗ ls
+total 4.0K
+drwxrwxrwx 1 sunny sunny 4.0K Jan 26 21:41 ../
+-rw-rw-rw- 1 sunny sunny  286 Jan 26 21:48 printing.py
+-rw-rw-rw- 1 sunny sunny  281 Jan 26 22:09 var.py
+-rw-rw-rw- 1 sunny sunny  168 Jan 26 22:20 oper.py
+drwxrwxrwx 1 sunny sunny 4.0K Jan 26 22:32 ./
+-rw-rw-rw- 1 sunny sunny 1.2K Jan 26 22:53 learn_lists.py
+drwxrwxrwx 1 sunny sunny 4.0K Jan 26 22:54 .git/
+➜  learn_python git:(master) ✗ mv learn_lists.py learn_data_structures.py 
+➜  learn_python git:(master) ✗ ls
+total 4.0K
+drwxrwxrwx 1 sunny sunny 4.0K Jan 26 21:41 ../
+-rw-rw-rw- 1 sunny sunny  286 Jan 26 21:48 printing.py
+-rw-rw-rw- 1 sunny sunny  281 Jan 26 22:09 var.py
+-rw-rw-rw- 1 sunny sunny  168 Jan 26 22:20 oper.py
+-rw-rw-rw- 1 sunny sunny 1.2K Jan 26 22:53 learn_data_structures.py
+drwxrwxrwx 1 sunny sunny 4.0K Jan 26 22:54 ./
+drwxrwxrwx 1 sunny sunny 4.0K Jan 26 22:54 .git/
+➜  learn_python git:(master) ✗ git add -A               
+➜  learn_python git:(master) ✗ git commit -m "learn about data structures"
+[master 117670f] learn about data structures
+ 1 file changed, 51 insertions(+)
+ create mode 100644 learn_data_structures.py
+➜  learn_python git:(master) git push -u origin master                  
+Counting objects: 3, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 839 bytes | 839.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To github.com:propython99/learn_python.git
+   edb504a..117670f  master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+➜  learn_python git:(master) 
