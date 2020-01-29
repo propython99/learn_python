@@ -1,4 +1,4 @@
-
+# different types of data types are: list, dict, set, tuple
 # storing weights of all people
 mom_w = 70
 dad_w = 70

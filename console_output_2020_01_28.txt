@@ -1,0 +1,284 @@
+➜  ~ python
+Python 3.6.7 (default, Oct 22 2018, 11:32:17) 
+[GCC 8.2.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> a = "hi"
+>>> b = "keerthi"
+>>> c = "!"
+>>> a
+'hi'
+>>> b
+'keerthi'
+>>> c
+'!'
+>>> a + b +c
+'hikeerthi!'
+>>> a + "__" + b +c
+'hi__keerthi!'
+>>> a + " " + b +c
+'hi keerthi!'
+>>> (a+b+c).join(" ")
+' '
+>>> (" ").join(a+b+c)
+'h i k e e r t h i !'
+>>> a = "10.0.1.120"
+>>> d = a
+>>> a = "hi"
+>>> a
+'hi'
+>>> a
+'hi'
+>>> b
+'keerthi'
+>>> c
+'!'
+>>> d
+'10.0.1.120'
+>>> ("_").join(a+b+c)
+'h_i_k_e_e_r_t_h_i_!'
+>>> name = b
+>>> name
+'keerthi'
+>>> "hi".join(name)
+'khiehiehirhithihhii'
+>>> ["hi", "keerthi", "!"]
+['hi', 'keerthi', '!']
+>>> ["apple", "banana", "cherry"]
+['apple', 'banana', 'cherry']
+>>> [142, 'zebra', True, 5j]
+[142, 'zebra', True, 5j]
+>>> [142, 'zebra@gmail.com', True, 5j]
+[142, 'zebra@gmail.com', True, 5j]
+>>> [142, 'zebra@gmail\'.com', True, 5j]
+[142, "zebra@gmail'.com", True, 5j]
+>>> [142, 'zebra@gmail\'\".com', True, 5j]
+[142, 'zebra@gmail\'".com', True, 5j]
+>>> [142, 'zebra@gmail\'".com', True, 5j]
+[142, 'zebra@gmail\'".com', True, 5j]
+>>> [142, 'zebra@gmail'\".com', True, 5j]
+  File "<stdin>", line 1
+    [142, 'zebra@gmail'\".com', True, 5j]
+                                        ^
+SyntaxError: unexpected character after line continuation character
+>>> [142, """zebra@gmail'".com""", True, 5j]
+[142, 'zebra@gmail\'".com', True, 5j]
+>>> [142, """zebra@gmail'".20238320-()*@%!*(*&^%$#%^&*()_(*&^%$#%^&*()com""", True, 5j]
+[142, 'zebra@gmail\'".20238320-()*@%!*(*&^%$#%^&*()_(*&^%$#%^&*()com', True, 5j]
+>>> quit()
+➜  ~ ls    
+total 124K
+-rw-r--r-- 1 sunny sunny  220 Jan 23 21:12 .bash_logout
+-rw-r--r-- 1 sunny sunny  807 Jan 23 21:12 .profile
+drwxrwxrwx 1 sunny sunny 4.0K Jan 23 21:13 .vscode-server/
+-rw-r--r-- 1 sunny sunny    0 Jan 23 21:43 .sudo_as_admin_successful
+drwxr-xr-x 1 root  root  4.0K Jan 23 21:43 ../
+drwxrwxrwx 1 sunny sunny 4.0K Jan 23 21:58 .ssh/
+-rw------- 1 sunny sunny   32 Jan 24 19:50 .lesshst
+-rw-r--r-- 1 sunny sunny 3.8K Jan 25 13:20 .bashrc
+-rw------- 1 sunny sunny 5.3K Jan 25 14:56 .bash_history
+-rw-rw-rw- 1 sunny sunny  42K Jan 25 21:15 .zcompdump
+-rw-r--r-- 1 sunny sunny  570 Jan 25 21:22 .zshrc
+-r--r--r-- 1 sunny sunny  880 Jan 25 21:22 .zshrc.zwc
+drwxrwxrwx 1 sunny sunny 4.0K Jan 25 21:22 antigen/
+drwxr-xr-x 1 sunny root  4.0K Jan 25 21:22 .antigen/
+-rw-rw-rw- 1 sunny sunny  160 Jan 25 21:30 .gitconfig
+drwxr-xr-x 1 sunny sunny 4.0K Jan 26 13:55 .ipython/
+drwxrwxrwx 1 sunny sunny 4.0K Jan 26 21:41 development/
+-rw------- 1 sunny sunny  17K Jan 26 22:58 .viminfo
+-rw------- 1 sunny sunny 1.5K Jan 28 23:17 .python_history
+-rw------- 1 sunny sunny  13K Jan 28 23:17 .zsh_history
+drwxr-xr-x 1 sunny sunny 4.0K Jan 28 23:17 ./
+➜  ~ cd development/learn_python
+➜  learn_python git:(master) ✗ ls
+total 68K
+drwxrwxrwx 1 sunny sunny 4.0K Jan 26 21:41 ../
+-rw-rw-rw- 1 sunny sunny  286 Jan 26 21:48 printing.py
+-rw-rw-rw- 1 sunny sunny  281 Jan 26 22:09 var.py
+-rw-rw-rw- 1 sunny sunny  168 Jan 26 22:20 oper.py
+-rw-rw-rw- 1 sunny sunny 1.2K Jan 26 22:53 learn_data_structures.py
+-rw-rw-rw- 1 sunny sunny  37K Jan 26 22:58 terminal_txt
+-rw-rw-rw- 1 sunny sunny    6 Jan 28 23:00 str.py
+drwxrwxrwx 1 sunny sunny 4.0K Jan 28 23:15 ./
+-rw-rw-rw- 1 sunny sunny  155 Jan 28 23:17 data_structures_continued.py
+drwxrwxrwx 1 sunny sunny 4.0K Jan 28 23:17 .git/
+➜  learn_python git:(master) ✗ python data_structures_continued.py 
+  File "data_structures_continued.py", line 3
+    ['apple', 15, False, 8j-5, 0B28102, 0x281ad, [5, True, 'list']],
+                                ^
+SyntaxError: invalid token
+➜  learn_python git:(master) ✗ python data_structures_continued.py
+[[1, 2, 3], ['apple', 15, False, (-5+8j), '0b28102', 164269, [5, True, 'list']], {'first': 'mom', 'second': 'dad', 'third': 'sis'}]
+➜  learn_python git:(master) ✗ python data_structures_continued.py
+[[1, 2, 3],
+ ['apple', 15, False, (-5+8j), '0b28102', 164269, [5, True, 'list']],
+ {'first': 'mom', 'second': 'dad', 'third': 'sis'}]
+➜  learn_python git:(master) ✗ python data_structures_continued.py
+[[1, 2, 3],
+ ['apple', 15, False, (-5+8j), '0b28102', 164269, [5, True, 'list']],
+ {'finally': ['bro', 'bil'], 'first': 'mom', 'second': 'dad', 'third': 'sis'}]
+➜  learn_python git:(master) ✗ python str.py                      
+['hi', 'keeru', '!']
+➜  learn_python git:(master) ✗ python str.py
+['hi', 'keeru', '!']
+➜  learn_python git:(master) ✗ python str.py
+['hi', 'keeru', '!']
+hi keeru !
+➜  learn_python git:(master) ✗ python str.py
+hi keeru !
+➜  learn_python git:(master) ✗ python str.py
+h i k e e r u !
+hi keeru !
+➜  learn_python git:(master) ✗ python str.py
+h_i_k_e_e_r_u_!
+hi keeru !
+➜  learn_python git:(master) ✗ python str.py
+h_i_k_e_e_r_u_!
+➜  learn_python git:(master) ✗ python str.py
+h_i_k_e_e_r_u_!
+<class 'str'>
+➜  learn_python git:(master) ✗ python str.py
+<class 'str'>
+➜  learn_python git:(master) ✗ python       
+Python 3.6.7 (default, Oct 22 2018, 11:32:17) 
+[GCC 8.2.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> type(152)
+<class 'int'>
+>>> type(12.1)
+<class 'float'>
+>>> type(False)
+<class 'bool'>
+>>> type("hi")
+<class 'str'>
+>>> type([1,2])
+<class 'list'>
+>>> type({1,2})
+<class 'set'>
+>>> type({"mom":1, "dad":2})
+<class 'dict'>
+>>> type((10,20))
+<class 'tuple'>
+>>> help(type("hi"))
+
+>>> ip = "10.78.8.1"
+>>> ip.split()
+['10.78.8.1']
+>>> ip.split(".")
+['10', '78', '8', '1']
+>>> quit()
+➜  learn_python git:(master) ✗ pwd   
+/home/sunny/development/learn_python
+➜  learn_python git:(master) ✗ python str.py                      
+<class 'str'>
+['10', '78', '8', '1']
+['', 'home', 'user', 'development', 'learn_python']
+➜  learn_python git:(master) ✗ python str.py
+<class 'str'>
+['10', '78', '8', '1']
+['', 'home', 'user', 'development', 'learn_python']
+['te', '', ' me he', '', 'o']
+➜  learn_python git:(master) ✗ python str.py
+<class 'str'>
+['10', '78', '8', '1']
+['', 'home', 'user', 'development', 'learn_python']
+['te', '', ' me he', '', 'o']
+['te', ' me he', 'o']
+➜  learn_python git:(master) ✗ python str.py
+<class 'str'>
+['10', '78', '8', '1']
+['', 'home', 'user', 'development', 'learn_python']
+['te', '', ' me he', '', 'o']
+['te', ' me he', 'o']
+['tell me who that funny person is.', '            please tell me.', '            he must have done other funny things in life.']
+➜  learn_python git:(master) ✗ python str.py
+<class 'str'>
+['10', '78', '8', '1']
+['', 'home', 'user', 'development', 'learn_python']
+['te', '', ' me he', '', 'o']
+['te', ' me he', 'o']
+['tell me who that funny person is. please tell me.', '            he must have done other funny things in life.']
+➜  learn_python git:(master) ✗ python str.py
+<class 'str'>
+['10', '78', '8', '1']
+['', 'home', 'user', 'development', 'learn_python']
+['te', '', ' me he', '', 'o']
+['te', ' me he', 'o']
+['tell me who that funny person is. ', 'please tell me.', 'he must have done other funny things in life.']
+➜  learn_python git:(master) ✗ python str.py
+<class 'str'>
+['10', '78', '8', '1']
+['', 'home', 'user', 'development', 'learn_python']
+['te', '', ' me he', '', 'o']
+['te', ' me he', 'o']
+['tell me who that funny person is.', 'please tell me.', 'he must have done other funny things in life.']
+5
+➜  learn_python git:(master) ✗ python str.py
+<class 'str'>
+['10', '78', '8', '1']
+['', 'home', 'user', 'development', 'learn_python']
+['te', '', ' me he', '', 'o']
+['te', ' me he', 'o']
+['tell me who that funny person is.', 'please tell me.', 'he must have done other funny things in life.']
+5
+3
+➜  learn_python git:(master) ✗ python str.py
+<class 'str'>
+['10', '78', '8', '1']
+['', 'home', 'user', 'development', 'learn_python']
+['te', '', ' me he', '', 'o']
+['te', ' me he', 'o']
+['tell me who that funny person is.', 'please tell me.', 'he must have done other funny things in life.']
+5
+3
+3
+➜  learn_python git:(master) ✗ python str.py
+<class 'str'>
+['10', '78', '8', '1']
+['', 'home', 'user', 'development', 'learn_python']
+['te', '', ' me he', '', 'o']
+['te', ' me he', 'o']
+['tell me who that funny person is.', 'please tell me.', 'he must have done other funny things in life.']
+5
+3
+4
+➜  learn_python git:(master) ✗ python       
+Python 3.6.7 (default, Oct 22 2018, 11:32:17) 
+[GCC 8.2.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> l = [5, 8, 3]
+>>> 5 in l
+True
+>>> 2 in l
+False
+>>> word = "keeru"
+>>> 3 in word
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: 'in <string>' requires string as left operand, not int
+>>> e in word
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'e' is not defined
+>>> "e" in word
+True
+>>> "r" in word
+True
+>>> "u" in word
+True
+>>> "ee" in word
+True
+>>> "kee" in word
+True
+>>> "k" in word
+True
+>>> "z" in word
+False
+>>> "hello" in word
+False
+>>> quit()
+➜  learn_python git:(master) ✗ date
+Wed Jan 29 13:16:11 EST 2020
+➜  learn_python git:(master) ✗ ######################################################
+############ Length of a string or an iterable #######
+######################################################
+➜  learn_python git:(master) ✗ 
