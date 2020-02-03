@@ -1,0 +1,425 @@
+➜  ~ cd development/learn_python
+➜  learn_python git:(master) ✗ ls
+total 72K
+-rw-rw-rw- 1 sunny sunny  286 Jan 26 21:48 printing.py
+-rw-rw-rw- 1 sunny sunny  281 Jan 26 22:09 var.py
+-rw-rw-rw- 1 sunny sunny  168 Jan 26 22:20 oper.py
+-rw-rw-rw- 1 sunny sunny  257 Jan 28 23:24 data_structures_continued.py
+-rw-rw-rw- 1 sunny sunny 1.2K Jan 28 23:40 learn_data_structures.py
+-rw-rw-rw- 1 sunny sunny    0 Jan 28 23:41 sets_example.py
+-rw-rw-rw- 1 sunny sunny 1.5K Jan 29 13:17 str.py
+-rw-rw-rw- 1 sunny sunny  37K Jan 29 13:17 terminal.txt
+-rw-rw-rw- 1 sunny sunny 9.1K Jan 29 13:18 console_output_2020_01_28.txt
+-rw-rw-rw- 1 sunny sunny   23 Jan 29 21:37 sample_file.txt
+-rw-rw-rw- 1 sunny sunny  305 Jan 29 22:36 generators_example.py
+-rw-rw-rw- 1 sunny sunny 4.1K Jan 29 23:23 context_manager.py
+drwxrwxrwx 1 sunny sunny 4.0K Jan 30 21:25 ../
+-rw-rw-rw- 1 sunny sunny 1.1K Jan 31 01:12 loops.py
+drwxrwxrwx 1 sunny sunny 4.0K Feb  1 11:16 ./
+-rw-rw-rw- 1 sunny sunny  128 Feb  1 11:34 func.py
+drwxrwxrwx 1 sunny sunny 4.0K Feb  1 11:34 .git/
+➜  learn_python git:(master) ✗ python func.py 
+hello
+➜  learn_python git:(master) ✗ python func.py
+hello keeru !
+➜  learn_python git:(master) ✗ python func.py
+hello keeru
+hello sruthi
+hello aparna
+hello deepika
+➜  learn_python git:(master) ✗ python func.py
+hello keeru
+hello sruthi
+hello aparna
+hello deepika
+➜  learn_python git:(master) ✗ python func.py
+Traceback (most recent call last):
+  File "func.py", line 12, in <module>
+    print('hello', k_friends[i])
+TypeError: list indices must be integers or slices, not str
+➜  learn_python git:(master) ✗ python func.py
+Traceback (most recent call last):
+  File "func.py", line 12, in <module>
+    print('hello', k_friends[i])
+TypeError: list indices must be integers or slices, not str
+➜  learn_python git:(master) ✗ python func.py
+Traceback (most recent call last):
+  File "func.py", line 12, in <module>
+    print('hello', friends[i])
+TypeError: list indices must be integers or slices, not str
+➜  learn_python git:(master) ✗ python func.py
+hello keeru
+hello sruthi
+hello aparna
+hello deepika
+➜  learn_python git:(master) ✗ python func.py
+hello keeru
+hello sruthi
+hello aparna
+hello deepika
+Traceback (most recent call last):
+  File "func.py", line 16, in <module>
+    print('hello', friends[i])
+TypeError: list indices must be integers or slices, not str
+➜  learn_python git:(master) ✗ python func.py
+Traceback (most recent call last):
+  File "func.py", line 13, in <module>
+    print('hello', friends[i])
+TypeError: list indices must be integers or slices, not str
+➜  learn_python git:(master) ✗ python func.py
+hello keeru
+hello sruthi
+hello aparna
+hello deepika
+➜  learn_python git:(master) ✗ python func.py
+hello 0
+hello 1
+hello 2
+hello 3
+Traceback (most recent call last):
+  File "func.py", line 13, in <module>
+    print(friends["keeru"])
+TypeError: list indices must be integers or slices, not str
+➜  learn_python git:(master) ✗ python func.py
+hello 0
+hello 1
+hello 2
+hello 3
+➜  learn_python git:(master) ✗ python func.py
+hello keeru
+hello sruthi
+hello aparna
+hello deepika
+➜  learn_python git:(master) ✗ python func.py
+hello keeru
+hello sruthi
+hello aparna
+hello deepika
+➜  learn_python git:(master) ✗ python func.py
+hello keeru
+hello sruthi
+hello aparna
+hello deepika
+deepika
+➜  learn_python git:(master) ✗ python func.py
+hello keeru
+hello sruthi
+hello aparna
+hello deepika
+hello john
+hello harry
+hello max
+hello suresh
+➜  learn_python git:(master) ✗ python func.py
+hello keeru
+hello sruthi
+hello aparna
+hello deepika
+hello john
+hello harry
+hello max
+hello suresh
+➜  learn_python git:(master) ✗ python func.py
+  File "func.py", line 21
+    
+                              ^
+SyntaxError: unexpected EOF while parsing
+➜  learn_python git:(master) ✗ python func.py
+  File "func.py", line 21
+    
+                              ^
+SyntaxError: unexpected EOF while parsing
+➜  learn_python git:(master) ✗ python func.py
+['keeru', 'k']
+['sruthi', 'maddali']
+['aparna', 'ayyangari']
+['deepika', 'jalaja']
+➜  learn_python git:(master) ✗ python func.py
+keeru
+sruthi
+aparna
+deepika
+➜  learn_python git:(master) ✗ python func.py
+keeru
+sruthi
+aparna
+deepika
+➜  learn_python git:(master) ✗ python func.py
+k
+s
+a
+d
+➜  learn_python git:(master) ✗ python func.py
+k
+s
+a
+d
+➜  learn_python git:(master) ✗ python func.py
+k
+s
+a
+d
+➜  learn_python git:(master) ✗ python func.py
+k
+s
+a
+d
+➜  learn_python git:(master) ✗ python func.py
+k
+s
+a
+d
+➜  learn_python git:(master) ✗ python func.py
+k
+s
+a
+d
+➜  learn_python git:(master) ✗ python func.py
+hello k
+hello s
+hello a
+hello d
+➜  learn_python git:(master) ✗ python func.py
+➜  learn_python git:(master) ✗ python func.py
+<class 'list'>
+➜  learn_python git:(master) ✗ python func.py
+hello k
+hello s
+hello a
+hello d
+➜  learn_python git:(master) ✗ python func.py
+hello k
+hello s
+hello a
+hello d
+hello j
+hello h
+hello m
+hello s
+➜  learn_python git:(master) ✗ python func_next.py 
+Traceback (most recent call last):
+  File "func_next.py", line 8, in <module>
+    greet_friends("hey girl", k_friends)
+NameError: name 'greet_friends' is not defined
+➜  learn_python git:(master) ✗ python func_next.py
+hey girl k
+hey girl s
+hey girl a
+hey girl d
+hi buddy j
+hi buddy h
+hi buddy m
+hi buddy s
+➜  learn_python git:(master) ✗ python func_next.py
+  File "func_next.py", line 3
+    def greet_friends(greeting="hello", friends_list):
+                     ^
+SyntaxError: non-default argument follows default argument
+➜  learn_python git:(master) ✗ python func_next.py
+Traceback (most recent call last):
+  File "func_next.py", line 17, in <module>
+    greet_friends(k_friends)
+TypeError: greet_friends() missing 1 required positional argument: 'friends_list'
+➜  learn_python git:(master) ✗ python func_next.py
+hello k
+hello s
+hello a
+hello d
+➜  learn_python git:(master) ✗ python func_next.py
+  File "func_next.py", line 3
+    def greet_friends(greeting="hello", friends_list):
+                     ^
+SyntaxError: non-default argument follows default argument
+➜  learn_python git:(master) ✗ python func_next.py
+hello k
+hello s
+hello a
+hello d
+➜  learn_python git:(master) ✗ python func_next.py
+hello k
+hello s
+hello a
+hello d
+hi buddy j
+hi buddy h
+hi buddy m
+hi buddy s
+➜  learn_python git:(master) ✗ python func_next.py
+hello   keerthi %                                          
+➜  learn_python git:(master) ✗ python func_next.py
+hello   keerthi hello   keerthi %                          
+➜  learn_python git:(master) ✗ python func_next.py
+hello   keerthi
+
+➜  learn_python git:(master) ✗ python func_next.py
+hello   keerthi
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+➜  learn_python git:(master) ✗ python func_next.py
+Traceback (most recent call last):
+  File "func_next.py", line 24, in <module>
+    print("hello", "keerthi", end="\n"*20, seperator="\t")
+TypeError: 'seperator' is an invalid keyword argument for this function
+➜  learn_python git:(master) ✗ python func_next.py
+  File "func_next.py", line 24
+    print(end="\n"*20, "hello", "keerthi", sep="\t")
+                      ^
+SyntaxError: positional argument follows keyword argument
+➜  learn_python git:(master) ✗ ls
+total 80K
+-rw-rw-rw- 1 sunny sunny  286 Jan 26 21:48 printing.py
+-rw-rw-rw- 1 sunny sunny  281 Jan 26 22:09 var.py
+-rw-rw-rw- 1 sunny sunny  168 Jan 26 22:20 oper.py
+-rw-rw-rw- 1 sunny sunny  257 Jan 28 23:24 data_structures_continued.py
+-rw-rw-rw- 1 sunny sunny 1.2K Jan 28 23:40 learn_data_structures.py
+-rw-rw-rw- 1 sunny sunny    0 Jan 28 23:41 sets_example.py
+-rw-rw-rw- 1 sunny sunny 1.5K Jan 29 13:17 str.py
+-rw-rw-rw- 1 sunny sunny  37K Jan 29 13:17 terminal.txt
+-rw-rw-rw- 1 sunny sunny 9.1K Jan 29 13:18 console_output_2020_01_28.txt
+-rw-rw-rw- 1 sunny sunny   23 Jan 29 21:37 sample_file.txt
+-rw-rw-rw- 1 sunny sunny  305 Jan 29 22:36 generators_example.py
+-rw-rw-rw- 1 sunny sunny 4.1K Jan 29 23:23 context_manager.py
+drwxrwxrwx 1 sunny sunny 4.0K Jan 30 21:25 ../
+-rw-rw-rw- 1 sunny sunny 1.1K Jan 31 01:12 loops.py
+-rw-rw-rw- 1 sunny sunny 2.1K Feb  1 12:57 func.py
+drwxrwxrwx 1 sunny sunny 4.0K Feb  1 13:07 ./
+drwxrwxrwx 1 sunny sunny 4.0K Feb  1 13:37 .git/
+-rw-rw-rw- 1 sunny sunny  828 Feb  1 13:38 func_next.py
+➜  learn_python git:(master) ✗ mkdir temp  
+➜  learn_python git:(master) ✗ ls
+total 80K
+-rw-rw-rw- 1 sunny sunny  286 Jan 26 21:48 printing.py
+-rw-rw-rw- 1 sunny sunny  281 Jan 26 22:09 var.py
+-rw-rw-rw- 1 sunny sunny  168 Jan 26 22:20 oper.py
+-rw-rw-rw- 1 sunny sunny  257 Jan 28 23:24 data_structures_continued.py
+-rw-rw-rw- 1 sunny sunny 1.2K Jan 28 23:40 learn_data_structures.py
+-rw-rw-rw- 1 sunny sunny    0 Jan 28 23:41 sets_example.py
+-rw-rw-rw- 1 sunny sunny 1.5K Jan 29 13:17 str.py
+-rw-rw-rw- 1 sunny sunny  37K Jan 29 13:17 terminal.txt
+-rw-rw-rw- 1 sunny sunny 9.1K Jan 29 13:18 console_output_2020_01_28.txt
+-rw-rw-rw- 1 sunny sunny   23 Jan 29 21:37 sample_file.txt
+-rw-rw-rw- 1 sunny sunny  305 Jan 29 22:36 generators_example.py
+-rw-rw-rw- 1 sunny sunny 4.1K Jan 29 23:23 context_manager.py
+drwxrwxrwx 1 sunny sunny 4.0K Jan 30 21:25 ../
+-rw-rw-rw- 1 sunny sunny 1.1K Jan 31 01:12 loops.py
+-rw-rw-rw- 1 sunny sunny 2.1K Feb  1 12:57 func.py
+-rw-rw-rw- 1 sunny sunny  828 Feb  1 13:38 func_next.py
+drwxrwxrwx 1 sunny sunny 4.0K Feb  1 13:38 temp/
+drwxrwxrwx 1 sunny sunny 4.0K Feb  1 13:38 ./
+drwxrwxrwx 1 sunny sunny 4.0K Feb  1 13:38 .git/
+➜  learn_python git:(master) ✗ cd temp                    
+➜  temp git:(master) ✗ ls
+total 0
+drwxrwxrwx 1 sunny sunny 4.0K Feb  1 13:38 ../
+drwxrwxrwx 1 sunny sunny 4.0K Feb  1 13:38 ./
+➜  temp git:(master) ✗ pwd                
+/home/sunny/development/learn_python/temp
+➜  temp git:(master) ✗ touch first  
+➜  temp git:(master) ✗ touch second
+➜  temp git:(master) ✗ touch 3rd   
+➜  temp git:(master) ✗ ls
+total 0
+drwxrwxrwx 1 sunny sunny 4.0K Feb  1 13:38 ../
+-rw-rw-rw- 1 sunny sunny    0 Feb  1 13:38 first
+-rw-rw-rw- 1 sunny sunny    0 Feb  1 13:38 second
+-rw-rw-rw- 1 sunny sunny    0 Feb  1 13:38 3rd
+drwxrwxrwx 1 sunny sunny 4.0K Feb  1 13:38 ./
+➜  temp git:(master) ✗ rm first       
+➜  temp git:(master) ✗ ls
+total 0
+drwxrwxrwx 1 sunny sunny 4.0K Feb  1 13:38 ../
+-rw-rw-rw- 1 sunny sunny    0 Feb  1 13:38 second
+-rw-rw-rw- 1 sunny sunny    0 Feb  1 13:38 3rd
+drwxrwxrwx 1 sunny sunny 4.0K Feb  1 13:39 ./
+➜  temp git:(master) ✗ touch first
+➜  temp git:(master) ✗ ls
+total 0
+drwxrwxrwx 1 sunny sunny 4.0K Feb  1 13:38 ../
+-rw-rw-rw- 1 sunny sunny    0 Feb  1 13:38 second
+-rw-rw-rw- 1 sunny sunny    0 Feb  1 13:38 3rd
+-rw-rw-rw- 1 sunny sunny    0 Feb  1 13:39 first
+drwxrwxrwx 1 sunny sunny 4.0K Feb  1 13:39 ./
+➜  temp git:(master) ✗ rm first second 3rd
+➜  temp git:(master) ✗ ls
+total 0
+drwxrwxrwx 1 sunny sunny 4.0K Feb  1 13:38 ../
+drwxrwxrwx 1 sunny sunny 4.0K Feb  1 13:39 ./
+➜  temp git:(master) ✗ ls         
+total 0
+drwxrwxrwx 1 sunny sunny 4.0K Feb  1 13:38 ../
+drwxrwxrwx 1 sunny sunny 4.0K Feb  1 13:39 ./
+➜  temp git:(master) ✗ touch first second thrid
+➜  temp git:(master) ✗ ls
+total 0
+drwxrwxrwx 1 sunny sunny 4.0K Feb  1 13:38 ../
+-rw-rw-rw- 1 sunny sunny    0 Feb  1 13:40 second
+-rw-rw-rw- 1 sunny sunny    0 Feb  1 13:40 first
+-rw-rw-rw- 1 sunny sunny    0 Feb  1 13:40 thrid
+drwxrwxrwx 1 sunny sunny 4.0K Feb  1 13:40 ./
+➜  temp git:(master) ✗ ls first second
+-rw-rw-rw- 1 sunny sunny 0 Feb  1 13:40 second
+-rw-rw-rw- 1 sunny sunny 0 Feb  1 13:40 first
+➜  temp git:(master) ✗ python func_next.py
+/usr/bin/python3: can't open file 'func_next.py': [Errno 2] No such file or directory
+➜  temp git:(master) ✗ cd ..        
+➜  learn_python git:(master) ✗ ls             
+total 80K
+-rw-rw-rw- 1 sunny sunny  286 Jan 26 21:48 printing.py
+-rw-rw-rw- 1 sunny sunny  281 Jan 26 22:09 var.py
+-rw-rw-rw- 1 sunny sunny  168 Jan 26 22:20 oper.py
+-rw-rw-rw- 1 sunny sunny  257 Jan 28 23:24 data_structures_continued.py
+-rw-rw-rw- 1 sunny sunny 1.2K Jan 28 23:40 learn_data_structures.py
+-rw-rw-rw- 1 sunny sunny    0 Jan 28 23:41 sets_example.py
+-rw-rw-rw- 1 sunny sunny 1.5K Jan 29 13:17 str.py
+-rw-rw-rw- 1 sunny sunny  37K Jan 29 13:17 terminal.txt
+-rw-rw-rw- 1 sunny sunny 9.1K Jan 29 13:18 console_output_2020_01_28.txt
+-rw-rw-rw- 1 sunny sunny   23 Jan 29 21:37 sample_file.txt
+-rw-rw-rw- 1 sunny sunny  305 Jan 29 22:36 generators_example.py
+-rw-rw-rw- 1 sunny sunny 4.1K Jan 29 23:23 context_manager.py
+drwxrwxrwx 1 sunny sunny 4.0K Jan 30 21:25 ../
+-rw-rw-rw- 1 sunny sunny 1.1K Jan 31 01:12 loops.py
+-rw-rw-rw- 1 sunny sunny 2.1K Feb  1 12:57 func.py
+drwxrwxrwx 1 sunny sunny 4.0K Feb  1 13:38 ./
+drwxrwxrwx 1 sunny sunny 4.0K Feb  1 13:40 temp/
+-rw-rw-rw- 1 sunny sunny 1008 Feb  1 13:43 func_next.py
+drwxrwxrwx 1 sunny sunny 4.0K Feb  1 13:44 .git/
+➜  learn_python git:(master) ✗ python func_next.py
+hello keerthi how are you doing these days
+➜  learn_python git:(master) ✗ python func_next.py
+  File "func_next.py", line 28
+    for i in *args:
+             ^
+SyntaxError: invalid syntax
+➜  learn_python git:(master) ✗ python func_next.py
+hellokeerthihowareyoudoingthesedays
+➜  learn_python git:(master) ✗ python func_next.py
+hello keerthi how are you doing these days 
+➜  learn_python git:(master) ✗ python func_next.py
+hello keerthi how are you doing these days 
+➜  learn_python git:(master) ✗ python func_next.py
+('hello', 'keerthi', 'how', 'are', 'you', 'doing', 'these', 'days')
+➜  learn_python git:(master) ✗ python func_next.py
+{'hey': 'how are you', 'hi': 'hi there'}
+➜  learn_python git:(master) ✗ python func_next.py
+('hello', 'keerthi', 'how', 'are', 'you', 'doing', 'these', 'days') {'hey': 'how are you', 'hi': 'hi there'}
+➜  learn_python git:(master) ✗ python func_next.py
+('hello', 'keerthi', 'how', 'are', 'you', 'doing', 'these', 'days')
+{'hey': 'how are you', 'hi': 'hi there'}
+➜  learn_python git:(master) ✗       
